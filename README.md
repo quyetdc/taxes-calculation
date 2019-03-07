@@ -1,4 +1,28 @@
-# SALES TAXES
+
+# HOW TO USE
+
+### Prerequisites
+* ruby
+* bundler
+
+### Installation
+```
+bundle install
+```
+
+### To run program
+
+```
+ruby main.rb
+```
+
+### To run tests
+```
+rspec spec/
+```
+
+# PROBLEM
+## SALES TAXES
 
 Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt. Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
 
@@ -8,9 +32,9 @@ Write an application that prints out the receipt details for these shopping bask
 
 Proper object orientated design is important. Each row in the input represents a line item of the receipt.
 
-# INPUT
+## INPUT
 
-## Input 1
+### Input 1
 Quantity, Product, Price
 
 1, book, 12.49
@@ -19,14 +43,14 @@ Quantity, Product, Price
 
 1, chocolate bar, 0.85
 
-## Input 2
+### Input 2
 Quantity, Product, Price
 
 1, imported box of chocolates, 10.00
 
 1, imported bottle of perfume, 47.50
 
-## Input 3
+### Input 3
 Quantity, Product, Price
 1, imported bottle of perfume, 27.99
 
@@ -36,9 +60,9 @@ Quantity, Product, Price
 
 1, box of imported chocolates, 11.25
 
-# OUTPUT
+## OUTPUT
 
-## Output 1
+### Output 1
 1, book, 12.49
 
 1, music CD, 16.49
@@ -49,7 +73,7 @@ Sales Taxes: 1.50
 
 Total: 29.83
 
-## Output 2
+### Output 2
 1, imported box of chocolates, 10.50
 
 1, imported bottle of perfume, 54.65
@@ -58,7 +82,7 @@ Sales Taxes: 7.65
 
 Total: 65.15
 
-## Output 3
+### Output 3
 1, imported bottle of perfume, 32.19
 
 1, bottle of perfume, 20.89
@@ -70,12 +94,3 @@ Total: 65.15
 Sales Taxes: 6.70
 
 Total: 74.68
-
-# Coding Style
-Please follow the guidelines below when developing this project.
--   PHP Coding Style Guidelines : http://www.php-fig.org/psr/psr-2/
--   Ruby Coding Style Guidelines http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-with-rspec/ https://github.com/styleguide
-
-# References
-[1] http://www.ruby-lang.org
-[2] https://www.relishapp.com/rspec/

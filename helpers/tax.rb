@@ -13,7 +13,7 @@ module Tax
   BASIC = 'basic'.freeze
   BASIC_RATE = 0.1
 
-  BASIC_IMPORTED = 'imported basic'.freeze
+  BASIC_IMPORTED = 'basic imported'.freeze
   BASIC_IMPORTED_RATE = 0.15
 
   def exempt?(name)
@@ -24,10 +24,13 @@ module Tax
         break
       end
     end
+
+    is_exempt
   end
 
   def get_type(name)
     words = name.split(' ')
+
     type = if exempt?(name)
              words.include?(IMPORTED) ? EXEMPT_IMPORTED : EXEMPT
            else

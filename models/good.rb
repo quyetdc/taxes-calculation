@@ -6,7 +6,13 @@ require_relative '../helpers/float_round'
 class Good
   include Tax
 
-  attr_reader :shelf_price, :type, :tax_rate, :tax_amount, :quantity, :name
+  attr_reader :price,
+              :shelf_price,
+              :type,
+              :tax_rate,
+              :tax_amount,
+              :quantity,
+              :name
 
   def initialize(quantity, name, price)
     @quantity = quantity

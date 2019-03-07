@@ -7,6 +7,7 @@ class Receipts
   def initialize(file_path)
     @file = file_path
     @order = nil
+    assign_order
   end
 
   def assign_order
@@ -19,14 +20,12 @@ class Receipts
   end
 
   def invoke
-    assign_order
-
     puts "\n"
     @order.goods.each do |good|
-      puts "#{good.quantity}, #{good.name}, #{good.shelf_price}"
+      puts "#{good.quantity}, #{good.name}, #{format('%.2f', good.shelf_price)}"
     end
-    puts "Sales Taxes: #{@order.total_taxes}"
-    puts "Total: #{@order.total_sales}"
+    puts "Sales Taxes: #{format('%.2f', @order.total_taxes)}"
+    puts "Total: #{format('%.2f', @order.total_sales)}"
     puts "\n"
   end
 end

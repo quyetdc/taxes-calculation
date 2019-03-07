@@ -18,7 +18,6 @@ class Order
       @total_taxes += good.quantity * good.tax_amount
       @total_sales += good.quantity * good.shelf_price
     end
-
     @total_taxes = @total_taxes.round(2)
     @total_sales = @total_sales.round(2)
   end
